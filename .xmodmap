@@ -1,4 +1,5 @@
-remove Lock = Caps_Lock
-keysym Caps_Lock = Super_R
-remove mod4 = Super_R
-add mod3 = Super_R
+clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R
+
