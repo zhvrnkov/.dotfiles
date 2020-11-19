@@ -16,7 +16,7 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-12"))
+             '(font . "JetBrains Mono-14"))
 
 ;; KeyBindings
 (require 'keybindings)
