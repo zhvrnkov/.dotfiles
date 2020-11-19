@@ -1,5 +1,8 @@
+os=(uname)
+
+[ $os != 'Darwin' ] && return
+
 alias template='cookiecutter gh:rosberry/swift-project-template'
-alias es='emacs -nw'
 f() { bundle exec fastlane "$@" }
 
 module() {
