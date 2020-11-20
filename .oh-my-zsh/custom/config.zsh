@@ -1,8 +1,5 @@
 ZSH_THEME="custom_bureau"
 ENABLE_CORRECTION="true"
+export VISUAL='emacsclient -ca emacs'
+export EDITOR="$VISUAL"
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='emacs -nw'
-else
-  export EDITOR='emacs -nw'
-fi
