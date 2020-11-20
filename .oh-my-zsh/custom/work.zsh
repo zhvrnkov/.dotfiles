@@ -1,6 +1,4 @@
-os=(uname)
-
-[ $os != 'Darwin' ] && return
+[ $(uname) != 'Darwin' ] && return
 
 alias template='cookiecutter gh:rosberry/swift-project-template'
 f() { bundle exec fastlane "$@" }

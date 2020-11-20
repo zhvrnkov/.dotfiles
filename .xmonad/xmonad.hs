@@ -3,6 +3,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.EZConfig
 import XMonad.Actions.KeyRemap
 import qualified XMonad.StackSet as W
+import XMonad.Util.SpawnOnce
 
 import qualified Data.Map as M
 import Data.Monoid
@@ -30,10 +31,11 @@ myDefaultLayout = avoidStruts layout
         ratioDelta = 3/100
         ratio = 1/2
 myDmenu = "dmenu_run -fn 'JetBrains Mono-11'"
-myTextEditor = "emacs"
+myTextEditor = "emacsclient -c -a emacs"
 myBrowser = "firefox"
 
-myStartupHook = return () --setDefaultKeyRemap emacsKeymap []
+myStartupHook = do
+  spawnOnce "emacs --daemon &"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,               xK_Return), spawn $ terminal conf)
@@ -45,8 +47,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
     , ((modm,               xK_o     ), refresh)
     , ((modm,               xK_Tab   ), windows W.focusDown)
-    , ((modm,               xK_j     ), windows W.focusDown)
-    , ((modm,               xK_k     ), windows W.focusUp  )
+    , ((modm .|. shiftMask, xK_Tab   ), windows W.focusUp)
     , ((modm,               xK_m     ), windows W.focusMaster  )
     , ((modm .|. shiftMask, xK_Return), windows W.swapMaster)
     , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
