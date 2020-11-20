@@ -18,6 +18,12 @@
 (add-to-list 'default-frame-alist
              '(font . "JetBrains Mono-14"))
 
+;; Functions (load all files in defuns-dir)
+(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
+(dolist (file (directory-files defuns-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
+
 ;; KeyBindings
 (require 'keybindings)
 
@@ -32,16 +38,10 @@
 ;; Sanity
 (require 'sane-defaults)
 
-
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (setq backup-directory-alist '(("." . "./.emacs_saves")))
-
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -113,3 +113,4 @@
 
 (setq python-shell-interpreter "python3.7")
 (put 'upcase-region 'disabled nil)
+
