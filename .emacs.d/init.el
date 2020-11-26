@@ -111,6 +111,6 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (global-linum-mode 1)
 
-(setq python-shell-interpreter "python3.7")
+(setq python-shell-interpreter "python3")
 (put 'upcase-region 'disabled nil)
 
