@@ -1,0 +1,3 @@
+Comment for macbook_screen_fix
+
+Content of this file should be pasted to /etc/X11/xorg.conf.d/20-intel.conf
