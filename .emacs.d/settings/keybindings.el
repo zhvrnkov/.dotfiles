@@ -14,4 +14,6 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x C-d") 'dired)
 
+(global-set-key (kbd "C-x C-y") 'browse-kill-ring)
+
 (provide 'keybindings)
