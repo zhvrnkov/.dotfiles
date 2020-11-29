@@ -13,6 +13,9 @@ service() {
 
 alias firebase_staging='f rsb_firebase --env stg'
 
+alias sapp='open -a'
+alias app='open -n -a'
+
 # RUBY
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
