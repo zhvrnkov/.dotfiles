@@ -11,10 +11,23 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
+;; Show keystrokes in progress
+(setq echo-keystrokes 0.1)
+
 (setq delete-by-moving-to-trash t)
 
 ;; Remove test in active region if inserting text
 (delete-selection-mode 1)
+
+;; Real emacs knights don't use shift to mark things
+(setq shift-select-mode nil)
+
+;; UTF-8 please
+(setq locale-coding-system 'utf-8) ; pretty
+(set-terminal-coding-system 'utf-8) ; pretty
+(set-keyboard-coding-system 'utf-8) ; pretty
+(set-selection-coding-system 'utf-8) ; please
+(prefer-coding-system 'utf-8) ; with sugar on top
 
 ;; Always display line and column numbers
 (setq line-number-mode t)

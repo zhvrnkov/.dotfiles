@@ -34,6 +34,7 @@
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'ido '(require 'setup-ido))
+(eval-after-load 'rust-mode '(require 'setup-rust-mode))
 
 ;; Sanity
 (require 'sane-defaults)
