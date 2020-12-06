@@ -64,7 +64,6 @@
 (require 'browse-kill-ring)
 (setq browse-kill-ring-quit-action 'save-and-restore)
 
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (global-linum-mode 1)
 
