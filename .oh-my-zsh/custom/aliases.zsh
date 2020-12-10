@@ -1,1 +1,1 @@
-alias te='emacsclient -nw'
+alias e=$EDITOR

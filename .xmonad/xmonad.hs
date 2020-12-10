@@ -32,7 +32,7 @@ myDefaultLayout = avoidStruts layout
         ratio = 1/2
 myDmenu = "dmenu_run -fn 'JetBrains Mono-11'"
 myTextEditor = "emacsclient -c -a emacs"
-myBrowser = "firefox"
+myBrowser = "google-chrome-stable"
 
 myStartupHook = do
   spawnOnce "emacs --daemon &"
