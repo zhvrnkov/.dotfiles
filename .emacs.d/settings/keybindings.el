@@ -23,6 +23,6 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (global-set-key (kbd "C-j") 'ace-jump-mode)
-(global-set-key (kbd "C-x C-g") 'grep-find)
+(global-set-key (kbd "C-x M-f") 'grep-find)
 
 (provide 'keybindings)
