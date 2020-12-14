@@ -24,5 +24,6 @@
 
 (global-set-key (kbd "C-j") 'ace-jump-mode)
 (global-set-key (kbd "C-x M-f") 'grep-find)
+(global-set-key (kbd "C-x C-w") 'mark-word)
 
 (provide 'keybindings)
