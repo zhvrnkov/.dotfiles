@@ -35,6 +35,7 @@
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
+(eval-after-load 'python '(require 'setup-python))
 
 ;; Sanity
 (require 'sane-defaults)
@@ -59,6 +60,8 @@
 ;; Setup environment variables from the user's shell.
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
+(exec-path-from-shell-copy-env "SSH_AGENT_PID")
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
 
 ;; Browse kill ring
 (require 'browse-kill-ring)
