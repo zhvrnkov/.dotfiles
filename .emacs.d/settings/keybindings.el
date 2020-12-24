@@ -26,4 +26,8 @@
 (global-set-key (kbd "C-x M-f") 'grep-find)
 (global-set-key (kbd "C-x C-w") 'mark-word)
 
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (define-key python-mode-map (kbd "C-c C-l") 'python-shell-send-current-file)))
+
 (provide 'keybindings)
