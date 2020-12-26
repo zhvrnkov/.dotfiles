@@ -12,7 +12,10 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; dired
 (global-set-key (kbd "C-x C-d") 'dired)
+(global-set-key (kbd "C-x +") 'make-empty-file)
 
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
@@ -22,7 +25,7 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-(global-set-key (kbd "C-j") 'ace-jump-mode)
+(global-set-key (kbd "C-j") 'ace-jump-char-mode)
 (global-set-key (kbd "C-x M-f") 'grep-find)
 (global-set-key (kbd "C-x C-w") 'mark-word)
 
