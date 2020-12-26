@@ -4,6 +4,7 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.KeyRemap
 import qualified XMonad.StackSet as W
 import XMonad.Util.SpawnOnce
+import XMonad.Hooks.FadeInactive
 
 import qualified Data.Map as M
 import Data.Monoid
@@ -19,6 +20,7 @@ main = do
                        , modMask     = myModMask
                        , borderWidth = 0
                        , startupHook = myStartupHook
+                       , logHook     = myLogHook
                        , keys        = myKeys
                        }
 
@@ -36,6 +38,9 @@ myBrowser = "google-chrome-stable"
 
 myStartupHook = do
   spawnOnce "emacs --daemon &"
+
+myLogHook = fadeInactiveLogHook fadeAmount
+    where fadeAmount = 0
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,               xK_Return), spawn $ terminal conf)
