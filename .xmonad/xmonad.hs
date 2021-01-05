@@ -20,7 +20,7 @@ main = do
                        , modMask     = myModMask
                        , borderWidth = 0
                        , startupHook = myStartupHook
-                       , logHook     = myLogHook
+--                       , logHook     = myLogHook
                        , keys        = myKeys
                        }
 
@@ -64,17 +64,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_s     ), sendMessage ToggleStruts)
     , ((modm .|. shiftMask, xK_backslash), io (exitWith ExitSuccess))
     , ((modm .|. shiftMask, xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+-- SOUND --------------------
+    , ((0                , 0x1008FF11), spawn "amixer -q sset Master 2%-")
+    , ((0                , 0x1008FF13), spawn "amixer -q sset Master 2%+")
+    , ((0                , 0x1008FF12), spawn "pactl set-sink-mute 0 toggle")
     ]
-    ++
-    [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-    -- ++
-    -- [ ((controlMask,               xK_n), spawn "xdotool key Down")
-    -- , ((controlMask,               xK_p), spawn "xdotool key Up")]
+    ++ workspacesBindings
+    where workspacesBindings = [((m .|. modm, k), windows $ f i)
+                               | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+                               , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
 
-emacsKeymap :: KeymapTable
-emacsKeymap = KeymapTable [((controlMask, xK_p), (0, xK_Up)),
-                           ((controlMask, xK_n), (0, xK_Down))]
 
 additionalKeysR = flip additionalKeysP
