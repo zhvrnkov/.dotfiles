@@ -37,7 +37,8 @@
      visual-regexp-steroids
      visual-regexp
      vterm
-     yaml-mode)))
+     yaml-mode
+     projectile)))
 
 (condition-case nil
     (init--install-packages)
@@ -70,6 +71,7 @@
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
+(require 'setup-projectile)
 
 ;; Sanity
 (require 'sane-defaults)
