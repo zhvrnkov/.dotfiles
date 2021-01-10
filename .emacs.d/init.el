@@ -41,7 +41,8 @@
      projectile
      lsp-mode
      lsp-sourcekit
-     flycheck)))
+     flycheck
+     helm)))
 
 (condition-case nil
     (init--install-packages)
