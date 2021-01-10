@@ -38,7 +38,10 @@
      visual-regexp
      vterm
      yaml-mode
-     projectile)))
+     projectile
+     lsp-mode
+     lsp-sourcekit
+     flycheck)))
 
 (condition-case nil
     (init--install-packages)
@@ -71,6 +74,7 @@
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
+(eval-after-load 'lsp-mode '(require 'setup-lsp))
 (require 'setup-projectile)
 
 ;; Sanity
