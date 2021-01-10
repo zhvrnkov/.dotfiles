@@ -42,7 +42,8 @@
      lsp-mode
      lsp-sourcekit
      flycheck
-     helm)))
+     helm
+     helm-lsp)))
 
 (condition-case nil
     (init--install-packages)
@@ -75,6 +76,7 @@
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
+(eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'lsp-mode '(require 'setup-lsp))
 (require 'setup-projectile)
 
