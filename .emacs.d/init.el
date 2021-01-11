@@ -15,7 +15,8 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(ace-jump-mode
+   '(s
+     ace-jump-mode
      browse-kill-ring
      doom-themes
      exec-path-from-shell
