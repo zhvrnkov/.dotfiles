@@ -24,7 +24,7 @@
  '(magit-commit-arguments nil)
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
-   '(projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
+   '(s projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
