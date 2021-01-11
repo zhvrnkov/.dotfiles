@@ -44,7 +44,8 @@
      lsp-sourcekit
      flycheck
      helm
-     helm-lsp)))
+     helm-lsp
+     yasnippet)))
 
 (condition-case nil
     (init--install-packages)
@@ -74,7 +75,8 @@
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
-(eval-after-load 'ido '(require 'setup-ido))
+(eval-after-load 'helm '(require 'setup-helm))
+;; (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'swift-mode '(require 'setup-swift))

@@ -36,6 +36,8 @@
 	  (lambda ()
 	    (define-key python-mode-map (kbd "C-c C-l") 'python-shell-send-current-file)))
 
-(define-key plantuml-mode-map (kbd "M-<tab>") 'plantuml-complete-symbol)
+(add-hook 'plantuml-mode-hook
+	  (lambda ()
+	    (define-key plantuml-mode-map (kbd "M-<tab>") 'plantuml-complete-symbol)))
 
 (provide 'keybindings)
