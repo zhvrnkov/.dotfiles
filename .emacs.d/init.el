@@ -57,7 +57,7 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-14"))
+             '(font . "JetBrains Mono-16"))
 
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
@@ -79,6 +79,7 @@
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'lsp-mode '(require 'setup-lsp))
+(eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (require 'setup-projectile)
 
 ;; Sanity

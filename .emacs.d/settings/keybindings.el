@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; Smex
 ;; (global-set-key (kbd "M-x") 'smex)
@@ -34,5 +35,7 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (define-key python-mode-map (kbd "C-c C-l") 'python-shell-send-current-file)))
+
+(define-key plantuml-mode-map (kbd "M-<tab>") 'plantuml-complete-symbol)
 
 (provide 'keybindings)
