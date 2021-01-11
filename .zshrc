@@ -1,11 +1,14 @@
-if [ "$0" != 'zsh' ]
-then
-    return
-fi
-
 export ZSH="$HOME/.oh-my-zsh"
+export VISUAL='emacsclient -ca emacs'
+export EDITOR="$VISUAL"
 
-plugins=(git emacs)
+CASE_SENSITIVE="true"
+ZSH_THEME="custom_bureau"
+ENABLE_CORRECTION="true"
+
+zstyle ":completion:*" matcher-list ''
+
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 x-copy-region-as-kill () {

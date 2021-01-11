@@ -1,3 +1,5 @@
+(require 's)
+
 (defvar user-home-directory (concat (expand-file-name "~") "/"))
 
 (defun shorter-file-name (file-name)
