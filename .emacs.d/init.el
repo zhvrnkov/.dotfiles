@@ -39,7 +39,14 @@
      visual-regexp
      vterm
      yaml-mode
-     projectile)))
+     projectile
+     lsp-mode
+     lsp-sourcekit
+     flycheck
+     helm
+     helm-lsp
+     yasnippet
+		 ivy)))
 
 (condition-case nil
     (init--install-packages)
@@ -52,7 +59,7 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-14"))
+             '(font . "JetBrains Mono-16"))
 
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
@@ -69,9 +76,14 @@
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
-(eval-after-load 'ido '(require 'setup-ido))
+(eval-after-load 'ivy '(require 'setup-ivy))
+;; (eval-after-load 'helm '(require 'setup-helm))
+;; (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
+(eval-after-load 'swift-mode '(require 'setup-swift))
+(eval-after-load 'lsp-mode '(require 'setup-lsp))
+(eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (require 'setup-projectile)
 
 ;; Sanity
