@@ -45,7 +45,8 @@
      flycheck
      helm
      helm-lsp
-     yasnippet)))
+     yasnippet
+		 ivy)))
 
 (condition-case nil
     (init--install-packages)
@@ -75,7 +76,8 @@
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
-(eval-after-load 'helm '(require 'setup-helm))
+(eval-after-load 'ivy '(require 'setup-ivy))
+;; (eval-after-load 'helm '(require 'setup-helm))
 ;; (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))

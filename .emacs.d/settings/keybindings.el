@@ -4,9 +4,9 @@
 (global-set-key (kbd "s-k") 'kill-current-buffer)
 
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
+;; (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; Smex
 ;; (global-set-key (kbd "M-x") 'smex)
