@@ -7,4 +7,12 @@
 (setq org-todo-keyword-faces '(("TODO" . "red") ("STARTED" . "yellow") ("DONE" . "green")))
 (setq org-done-keyword-faces '(("DONE" . "green")))
 
+;; SETUP SRC
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+	 (scheme . t)))
+
+(setq org-babel-python-command "python3")
+
 (provide 'setup-org)

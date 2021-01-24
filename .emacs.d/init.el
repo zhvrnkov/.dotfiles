@@ -81,6 +81,7 @@
 (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'lsp-mode '(require 'setup-lsp))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
+(eval-after-load 'geiser '(require 'setup-geiser))
 (require 'setup-ivy)
 (require 'setup-projectile)
 
@@ -110,6 +111,11 @@
 ;; Browse kill ring
 (require 'browse-kill-ring)
 (setq browse-kill-ring-quit-action 'save-and-restore)
+
+;; Emacs server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (global-linum-mode 1)
