@@ -1,6 +1,6 @@
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (setq inhibit-startup-screen t)
 
@@ -20,31 +20,21 @@
      browse-kill-ring
      doom-themes
      exec-path-from-shell
-     gruber-darker-theme
-     haskell-mode
-     ido-completing-read+
-     ido-vertical-mode
-     json-mode
      magit
-     markdown-mode
      multiple-cursors
-     nasm-mode
-     paredit
-     plantuml-mode
-     rust-mode
-     smex
-     swift-mode
      undo-tree
      visual-regexp-steroids
      visual-regexp
      vterm
+     nasm-mode
+     plantuml-mode
+     rust-mode
+     swift-mode
      yaml-mode
+		 haskell-mode
+     json-mode
+		 markdown-mode
      projectile
-     lsp-mode
-     lsp-sourcekit
-     flycheck
-     helm
-     helm-lsp
      yasnippet
 		 ivy)))
 
@@ -70,16 +60,12 @@
 ;; KeyBindings
 (require 'keybindings)
 
-;; EIMP
-;;(require 'eimp)
-
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'swift-mode '(require 'setup-swift))
-(eval-after-load 'lsp-mode '(require 'setup-lsp))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (eval-after-load 'geiser '(require 'setup-geiser))
 (require 'setup-ivy)
@@ -117,8 +103,7 @@
 (unless (server-running-p)
   (server-start))
 
+;; Maximized window on launch
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(global-linum-mode 1)
 
-(setq python-shell-interpreter "python3")
 (put 'upcase-region 'disabled nil)
