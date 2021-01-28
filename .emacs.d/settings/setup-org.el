@@ -15,4 +15,7 @@
 
 (setq org-babel-python-command "python3")
 
+;; Disable confirmation on C-c C-c
+(setq org-confirm-babel-evaluate nil)
+
 (provide 'setup-org)
