@@ -3,6 +3,7 @@
 (scroll-bar-mode -1)
 
 (setq inhibit-startup-screen t)
+(setq-default indent-tabs-mode nil)
 
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
@@ -31,12 +32,12 @@
      rust-mode
      swift-mode
      yaml-mode
-		 haskell-mode
+     haskell-mode
      json-mode
-		 markdown-mode
+      markdown-mode
      projectile
      yasnippet
-		 ivy)))
+     ivy)))
 
 (condition-case nil
     (init--install-packages)
