@@ -58,9 +58,6 @@
   (when (file-regular-p file)
     (load file)))
 
-;; KeyBindings
-(require 'keybindings)
-
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
@@ -69,8 +66,12 @@
 (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (eval-after-load 'geiser '(require 'setup-geiser))
-(require 'setup-ivy)
+(require 'setup-ido)
+;; (require 'setup-ivy)
 (require 'setup-projectile)
+
+;; KeyBindings
+(require 'keybindings)
 
 ;; Sanity
 (require 'sane-defaults)

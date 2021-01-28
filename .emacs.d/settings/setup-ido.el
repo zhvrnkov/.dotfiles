@@ -9,10 +9,10 @@
       ido-use-filename-at-point nil
       ido-max-prospects 10)
 
-;; (ido-mode 1)
-;; (ido-everywhere 1)
-;; (ido-ubiquitous-mode)
-;; (ido-vertical-mode)
+(ido-mode 1)
+(ido-everywhere 1)
+(ido-ubiquitous-mode)
+(ido-vertical-mode)
 
 (defun my/anti-ido-advice (func &rest args)
   "Temporarily disable IDO and call function FUNC with arguments ARGS."
