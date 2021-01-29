@@ -1,2 +1,3 @@
-alias e=$EDITOR
-alias et="emacsclient -t"
+alias em="$VISUAL"
+alias et="$EDITOR"
+alias emd='emacs --daemon'

@@ -1,3 +1,4 @@
+return
 [ $(uname) != 'Darwin' ] && return
 
 alias template='cookiecutter gh:rosberry/swift-project-template'
