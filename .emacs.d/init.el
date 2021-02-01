@@ -66,9 +66,11 @@
 (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (eval-after-load 'geiser '(require 'setup-geiser))
+(eval-after-load 'lsp-mode '(require 'setup-lsp))	
 (require 'setup-ido)
-;; (require 'setup-ivy)
 (require 'setup-projectile)
+(require 'setup-whitespace)
+(require 'setup-display-lines)
 
 ;; KeyBindings
 (require 'keybindings)
