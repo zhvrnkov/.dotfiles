@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
-export VISUAL='emacsclient -ca emacs'
-export EDITOR='emacsclient -t'
+export VISUAL='vim'
+export EDITOR='vim'
 
 CASE_SENSITIVE="true"
 ZSH_THEME="custom_bureau"
@@ -35,3 +35,4 @@ zstyle :compinstall filename '/Users/vz/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+bindkey -v
