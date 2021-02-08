@@ -25,8 +25,8 @@
  '(magit-commit-arguments nil)
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
-   '(company evil flx-ido ido-at-point ag lsp-ivy lsp-ui dired-hacks-utils geiser ivy yasnippet helm helm-lsp s projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
- '(plantuml-indent-level 4)
+ '(company evil flx-ido ido-at-point ag lsp-ivy lsp-ui dired-hacks-utils geiser ivy yasnippet helm helm-lsp s projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
+'(plantuml-indent-level 4)
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(tab-width 2)
