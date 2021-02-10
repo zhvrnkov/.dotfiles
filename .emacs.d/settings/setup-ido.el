@@ -1,5 +1,6 @@
 (require 'ido)
 (require 'ido-vertical-mode)
+(require 'ido-at-point)
 
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
@@ -12,6 +13,13 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (ido-ubiquitous-mode)
+
+(require 'flx-ido)
+(flx-ido-mode 1)
+
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
 (ido-vertical-mode)
 
 (defun my/anti-ido-advice (func &rest args)
