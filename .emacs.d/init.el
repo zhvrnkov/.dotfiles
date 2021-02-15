@@ -34,10 +34,11 @@
      yaml-mode
      haskell-mode
      json-mode
-      markdown-mode
+     markdown-mode
      projectile
      yasnippet
-     ivy)))
+     ivy
+     ido-completing-read+)))
 
 (condition-case nil
     (init--install-packages)
