@@ -24,7 +24,7 @@
  '(magit-commit-arguments nil)
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
-   '(ivy yasnippet helm helm-lsp s projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
+   '(dash-functional lsp-haskell gnu-elpa-keyring-update lsp-mode ivy yasnippet helm helm-lsp s projectile nasm-mode vterm ace-jump-mode paredit multiple-cursors multitran rust-mode browse-kill-ring visual-regexp-steroids visual-regexp undo-tree ido-vertical-mode ## yaml-mode plantuml-mode json-mode doom-themes swift-mode exec-path-from-shell magit gruber-darker-theme ido-completing-read+ haskell-mode smex markdown-mode))
  '(plantuml-indent-level 4)
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
