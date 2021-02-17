@@ -4,6 +4,9 @@
 (global-set-key (kbd "s-k") 'kill-current-buffer)
 
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
+;; (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; Smex
 (global-set-key (kbd "M-x") 'smex)
@@ -32,5 +35,12 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (define-key python-mode-map (kbd "C-c C-l") 'python-shell-send-current-file)))
+
+(add-hook 'plantuml-mode-hook
+	  (lambda ()
+	    (define-key plantuml-mode-map (kbd "M-<tab>") 'plantuml-complete-symbol)))
+
+(define-key ido-common-completion-map (kbd "C-n") 'ido-next-match)
+(define-key ido-common-completion-map (kbd "C-p") 'ido-prev-match)
 
 (provide 'keybindings)

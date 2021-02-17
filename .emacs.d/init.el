@@ -1,8 +1,9 @@
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (setq inhibit-startup-screen t)
+(setq-default indent-tabs-mode nil)
 
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
@@ -15,29 +16,29 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(ace-jump-mode
+   '(s
+     ace-jump-mode
      browse-kill-ring
      doom-themes
      exec-path-from-shell
-     gruber-darker-theme
-     haskell-mode
-     ido-completing-read+
-     ido-vertical-mode
-     json-mode
      magit
-     markdown-mode
      multiple-cursors
-     nasm-mode
-     paredit
-     plantuml-mode
-     rust-mode
-     smex
-     swift-mode
      undo-tree
      visual-regexp-steroids
      visual-regexp
      vterm
-     yaml-mode)))
+     nasm-mode
+     plantuml-mode
+     rust-mode
+     swift-mode
+     yaml-mode
+     haskell-mode
+     json-mode
+     markdown-mode
+     projectile
+     yasnippet
+     ivy
+     ido-completing-read+)))
 
 (condition-case nil
     (init--install-packages)
@@ -50,7 +51,7 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-14"))
+             '(font . "JetBrains Mono-16"))
 
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
@@ -58,18 +59,20 @@
   (when (file-regular-p file)
     (load file)))
 
-;; KeyBindings
-(require 'keybindings)
-
-;; EIMP
-;;(require 'eimp)
-
 ;; Extensions
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
-(eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
+(eval-after-load 'swift-mode '(require 'setup-swift))
+(eval-after-load 'plantuml-mode '(require 'setup-plantuml))
+(eval-after-load 'geiser '(require 'setup-geiser))
+(require 'setup-ido)
+;; (require 'setup-ivy)
+(require 'setup-projectile)
+
+;; KeyBindings
+(require 'keybindings)
 
 ;; Sanity
 (require 'sane-defaults)
@@ -98,8 +101,12 @@
 (require 'browse-kill-ring)
 (setq browse-kill-ring-quit-action 'save-and-restore)
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(global-linum-mode 1)
+;; Emacs server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
-(setq python-shell-interpreter "python3")
+;; Maximized window on launch
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (put 'upcase-region 'disabled nil)

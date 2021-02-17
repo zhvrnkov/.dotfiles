@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: startuml
+# key: startuml
+# --
+@startuml $1.png
+
+!$v = "View"
+!$p = "Presenter"
+!$s = "Services"
+!$u = "User"
+  
+participant $u
+participant $v
+participant $p
+collections $s
+$0
+@enduml
