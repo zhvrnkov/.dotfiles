@@ -38,7 +38,9 @@
      projectile
      yasnippet
      ivy
-     ido-completing-read+)))
+     ido-completing-read+
+     flx
+     flx-ido)))
 
 (condition-case nil
     (init--install-packages)
@@ -51,7 +53,7 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Mono-16"))
+             '(font . "JetBrains Mono-12"))
 
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
@@ -67,9 +69,13 @@
 (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (eval-after-load 'geiser '(require 'setup-geiser))
+(eval-after-load 'lsp-mode '(require 'setup-lsp))
+(eval-after-load 'company '(require 'setup-company))
 (require 'setup-ido)
 ;; (require 'setup-ivy)
 (require 'setup-projectile)
+(require 'setup-whitespace)
+(require 'setup-display-lines)
 
 ;; KeyBindings
 (require 'keybindings)
