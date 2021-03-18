@@ -63,7 +63,7 @@
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'rust-mode '(require 'setup-rust-mode))
 (eval-after-load 'python '(require 'setup-python))
-(eval-after-load 'swift-mode '(require 'setup-swift))
+;; (eval-after-load 'swift-mode '(require 'setup-swift))
 (eval-after-load 'plantuml-mode '(require 'setup-plantuml))
 (eval-after-load 'geiser '(require 'setup-geiser))
 (eval-after-load 'lsp-mode '(require 'setup-lsp))
@@ -113,3 +113,4 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
