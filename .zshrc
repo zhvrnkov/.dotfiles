@@ -35,7 +35,7 @@ zstyle :compinstall filename '/Users/vz/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-bindkey -v
+bindkey -e
 
 # Disable correction
 unsetopt correct_all
