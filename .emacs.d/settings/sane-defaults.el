@@ -22,6 +22,9 @@
 ;; Real emacs knights don't use shift to mark things
 (setq shift-select-mode nil)
 
+;; No electric indent
+(setq electric-indent-mode nil)
+
 ;; UTF-8 please
 (setq locale-coding-system 'utf-8) ; pretty
 (set-terminal-coding-system 'utf-8) ; pretty

@@ -36,3 +36,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 bindkey -e
+
+# Disable correction
+unsetopt correct_all
