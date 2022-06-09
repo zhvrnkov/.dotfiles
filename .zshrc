@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export VISUAL='vim'
 export EDITOR='vim'
+export PATH=$PATH:~/.local/bin
 
 CASE_SENSITIVE="true"
 ZSH_THEME="custom_bureau"
